@@ -19,7 +19,7 @@ public class Rireki {
             /* 2.1.1 データベースに接続 */
             Class.forName("com.mysql.jdbc.Driver").newInstance(); //com.mysql.jdbc.Driverはドライバのクラス名
             String url = "jdbc:mysql://localhost/softd4?characterEncoding=UTF-8"; //schoolがデータベース名：文字エンコードはUTF-8
-            Connection conn = DriverManager.getConnection(url, "***", "***"); //上記URL設定でユーザ名とパスワードを使って接続
+            Connection conn = DriverManager.getConnection(url, "softd", "softd"); //上記URL設定でユーザ名とパスワードを使って接続
 
             /* 2.1.2 SELECT文の実行 */ String sql = "SELECT * FROM rireki_info where member_id=?"; //SQL文の設定 ?などパラメータが必要がない場合は通常のStatementを利用
             PreparedStatement stmt = conn.prepareStatement(sql); //JDBCのステートメント（SQL文）の作成
